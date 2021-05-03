@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DotNetSeleniumExtras.WaitHelpers" Version="3.11.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.4" />
+    <PackageReference Include="NUnit" Version="3.13.1" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.17.0" />
+    <PackageReference Include="Selenium.Support" Version="3.141.0" />
+    <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
+    <PackageReference Include="ExtentReports" Version="4.1.0" />
+    <PackageReference Include="SpecFlow" Version="3.7.38" />
+    <PackageReference Include="SpecFlow.NUnit" Version="3.7.38" />
+    <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.7.38" />
+    <PackageReference Include="SpecFlow.CustomPlugin" Version="3.7.38" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="FeatureFiles\" />
+    <Folder Include="Steps\" />
+    <Folder Include="Hooks\" />
+  </ItemGroup>
+  <ItemGroup>
+    <SpecFlowFeatureFiles Update="FeatureFiles\TMPage.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>TMPage.feature.cs</LastGenOutput>
+    </SpecFlowFeatureFiles>
+  </ItemGroup>
+</Project>
